@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>VPL Subscription Service</title>
+    <link href="styling.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!--Logo + Search Bar-->
+    <header>
+      <img src="Images/logo.png" class="logoimage" alt="Vancouver Public Library logo">
+      <div id="searchbar">
+        <a href="https://www.vpl.ca/" class="headerlink">Log Out</a><br>
+        <section id="centringparent">
+          <input type="text" name="search" id="search" class="search" placeholder="Search the catalogue">
+          <input type="submit" name="searchbutton" id="searchbuton" class="searchbutton" value="">
+        </section>
+      </div>
+    </header>
+
+    <!--Navigation links-->
+    <nav>
+      <ul>
+        <li><a href="https://www.vpl.ca/hours-locations">Branch Information</a></li>
+        <li><a href="#content">Subscription Service</a></li>
+        <li><a href="https://vpl.bibliocommons.com/">Borrowed Materials</a></li>
+        <li><a href="https://www.vpl.ca/kids/programs">Programs + Events</a></li>
+        <li><a href="https://www.vpl.ca/facilities/central-library-study-rooms">Booking + Facilities</a></li>
+      </ul>
+    </nav>
+
+    <!--Page Content-->
+    <div id="parent" class="parent">
+      <div id="content" class="content">
+      <form action="submission.html" method="POST"><!--Form-->
+
+        <div id="progressbar">
+          <div>4 of 4</div>
+        </div>
+
+        <section class="questiongroup">
+          <h1>Delivery information.</h1> <br>
+          Almost done! Just tell us where you want books dropped off.
+        </section>
+
+        <!--Question 1-->
+        <section class="questiongroup">
+          <div class="question">
+            1. What is your name?
+          </div>
+          <div class="answer">
+            <div class="answerlarge">
+              <input type="text" name="Q1Name" id="Q1Name" class="large" placeholder="Jane Brown" required>
+            </div>
+          </div>
+        </section>
+
+        <!--Question 2-->
+        <section class="questiongroup">
+          <div class="question">
+            2. How can we contact you?
+          </div>
+          <div class="answer">
+            <div class="answermedium">
+              <label for="Q2email"><h4>Email</h4></label>
+              <input type="email" name="Q2email" id="Q2email" class="medium" placeholder="janebrown@email.com" required>
+            </div>
+            <div class="answersmall">
+              <label for="Q2Phone"><h4>Phone #</h4></label>
+              <input type="text" name="Q2Phone" id="Q2Phone" class="small" placeholder="123-456-7890" required pattern="[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" required>
+            </div>
+          </div>
+        </section>
+
+        <!--Question 3-->
+        <section class="questiongroup">
+          <div class="question">
+            3. How would you like to be notified about deliveries?
+          </div>
+          <div class="radiobar">
+            <label class="radiobutton a">
+              <input type="radio" name="delivery" id="Q3text" value="text" required>
+              <span class="radiolabel">Text</span>
+            </label>
+            <label class="radiobutton b">
+              <input type="radio" name="delivery" id="Q3email" value="email">
+              <span class="radiolabel">Email</span>
+            </label>
+            <label class="radiobutton c">
+              <input type="radio" name="delivery" id="Q3both" value="both">
+              <span class="radiolabel">Both</span>
+            </label>
+          </div>
+        </section>
+
+        <!--Question 4-->
+        <section class="questiongroup">
+          <div class="question">
+            4. Where should we drop books off?
+          </div>
+          <div class="answer">
+            <div class="answermedium">
+              <label for="Q4street"><h4>Street Address</h4></label>
+              <input type="text" name="Q4street" id="Q4street" class="medium" placeholder="123 Apple Street East" required>
+            </div>
+            <div class="answersmall">
+              <label for="Q4apt"><h4>Apt #</h4></label>
+              <input type="text" name="Q4apt" id="Q4apt" class="small" placeholder="4">
+            </div>
+          </div>
+          <div class="answer">
+            <div class="answermedium">
+              <label for="Q4city"><h4>City</h4></label>
+              <input type="text" name="Q4city" id="Q4city" class="medium" placeholder="Vancouver" required>
+            </div>
+            <div class="answersmall">
+              <label for="Q4postal"><h4>Postal Code</h4></label>
+              <input type="text" name="Q4postal" id="Q4postal" class="small" placeholder="A1A 1A1" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
+            </div>
+          </div>
+        </section>
+
+        <!--Next button-->
+        <section class="next">
+          <input type="submit" value="Send me books!" alt="Form submission button">
+        </section>
+    </div>
+  </div>
+  </body>
+</html>
